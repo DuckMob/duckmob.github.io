@@ -1,0 +1,299 @@
+<html>
+
+<head>
+    <title>RedYetiDev</title>
+    <script src="anime.min.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+        integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="flex" id="main">
+        <div style="font-size: 100px; position: absolute;" id="name">RedYetiDev</div>
+        <div id="about" style="font-size: 25px; display: none; padding-left: 75px; padding-right: 75px;">
+            👋, I am <b>RedYetiDev</b>. I would say I am pretty good at developing anything API or WebSocket related. I
+            tend
+            to code in JavaScript, but I still know several other languages. If you wanna know more about me, my email
+            is <a style="color: lightblue" href="mailto:redyetidev@gmail.com">RedYetiDev@gmail.com</a>
+        </div>
+        <div style="display: none;" id="options">
+            <button id="projectButton" class="button" onclick="projectPressed()">Projects</button>
+            <button id="aboutButton" class="button" onclick="aboutPressed()">About</button>
+            <button class="button social" style="text-align: center;">
+                <span class="text">Socials</span>
+                <div class="links">
+                    <i class="fa-brands fa-github" onclick="document.location = 'https://github.com/redyetidev'"></i>
+                    <i class="fa-brands fa-google" onclick="document.location = 'mailto:redyetidev@gmail.com'"></i>
+                    <i class="fa-brands fa-npm" onclick="document.location = 'https://www.npmjs.com/~redyetidev'"></i>
+                </div>
+            </button>
+        </div>
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500"
+            zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet"
+            version="1.0">
+            <path stroke="#ff1616" fill="#212121" stroke-width="15" class="svg-animate"
+                d="M 187.5 37.5 C 104.65625 37.5 37.5 104.65625 37.5 187.5 C 37.5 270.34375 104.65625 337.5 187.5 337.5 C 270.34375 337.5 337.5 270.34375 337.5 187.5 C 337.5 104.65625 270.34375 37.5 187.5 37.5 "
+                fill-opacity="1" fill-rule="nonzero" />
+            <path stroke="#ff1616" fill="#212121" stroke-width="15" class="svg-animate"
+                d="M 187.675781 227.230469 C 151.019531 227.230469 121.300781 291.027344 121.300781 369.730469 C 121.300781 448.429688 151.019531 512.230469 187.675781 512.230469 C 224.335938 512.230469 254.050781 448.429688 254.050781 369.730469 C 254.050781 291.027344 224.335938 227.230469 187.675781 227.230469 "
+                fill-opacity="1" fill-rule="nonzero" />
+            <path stroke="#ff1616" fill="#212121" stroke-width="15" class="svg-animate"
+                d="M 187.527344 127.527344 C 154.390625 127.527344 127.527344 154.390625 127.527344 187.527344 C 127.527344 220.664062 154.390625 247.527344 187.527344 247.527344 C 220.664062 247.527344 247.527344 220.664062 247.527344 187.527344 C 247.527344 154.390625 220.664062 127.527344 187.527344 127.527344 "
+                fill-opacity="1" fill-rule="nonzero" />
+        </svg>
+    </div>
+    <!-- Projects -->
+    <div class="flex" id="projects" style="display: none;">
+        <div class="arrow" style="left: 5%; position: absolute; top: 50%; transform: rotate(180deg);" id="back"
+            onclick="goBack()">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+        </div>
+        <div class="arrow" style="left: 95%; position: absolute; top: 50%;" id="next" onclick="goNext()">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+        </div>
+        <div style="position: absolute; top: 0;">
+            <h1 style="font-size: 50px; margin-bottom: -10px;">Projects</h1>
+            <h1 style="font-size: 25px; color: gray;">View full list on <a style="color: lightskyblue"
+                    href="https://github.com/RedYetiDev?tab=repositories">GitHub</a></h1>
+            <button class="button" onclick="exitProjects()">Back</button>
+        </div>
+        <div id="actualprojects">
+            <div id="quizlet">
+                <div style="font-size: 100px;">Quizlet.JS</div>
+                <div style="font-size: 25px;">Quizlet.JS is both a wrapper for the Quizlet API, and a client for Quizlet
+                    Live</div>
+                <br />
+                <div>
+                    <button class="button"
+                        onclick="window.location = 'https://github.com/redyetidev/quizlet.js'"><i class="fa-brands fa-github"></i>Repository</button>
+                    <button class="button"
+                        onclick="window.location = 'https://www.npmjs.com/package/quizlet.js'"><i class="fa-brands fa-npm"></i>Package</button>
+                    <button class="button" onclick="window.location = 'https://quizlet.js.org'">Documentation</button>
+                    <button class="button" onclick="window.location = 'https://web.quizlet.js.org'">Live Client</button>
+                </div>
+            </div>
+            <div id="quizizz" style="display: none;">
+                <div style="font-size: 100px;">jsQuizizz</div>
+                <div style="font-size: 25px;">jsQuizizz is both a wrapper for the Quizizz API, and a client for the
+                    hosted
+                    games</div>
+                <br />
+                <div>
+                    <button class="button"
+                        onclick="window.location = 'https://github.com/redyetidev/jsQuizizz'"><i class="fa-brands fa-github"></i>Repository</button>
+                        <button class="button"
+                        onclick="window.location = 'https://www.npmjs.com/package/jsquizizz'"><i class="fa-brands fa-npm"></i>Package</button>
+                </div>
+            </div>
+            <div id="tt" style="display: none;">
+                <div style="font-size: 100px;">TerminalTools</div>
+                <div style="font-size: 25px;">Tools for your terminal</div>
+                <br />
+                <div>
+                    <button class="button"
+                        onclick="window.location = 'https://github.com/redyetidev/terminaltools'"><i class="fa-brands fa-github"></i>Repository</button>
+                    <button class="button"
+                        onclick="window.location = 'https://www.npmjs.com/package/terminaltools'"><i class="fa-brands fa-npm"></i>Package</button>
+                        
+                    <button class="button" onclick="window.location = 'https://tt.js.org'">Website</button>
+                </div>
+            </div>
+            <div id="tv" style="display: none;">
+                <div style="font-size: 100px;">TermView</div>
+                <div style="font-size: 25px;">Render images and videos within the terminal</div>
+                <br />
+                <div>
+                    <button class="button"
+                        onclick="window.location = 'https://github.com/redyetidev/termview'"><i class="fa-brands fa-github"></i>Repository</button>
+                    <button class="button"
+                        onclick="window.location = 'https://www.npmjs.com/package/termview'"><i class="fa-brands fa-npm"></i>Package</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            anime.timeline({
+                easing: 'easeInOutSine'
+            })
+                .add({
+                    targets: ".svg-animate",
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    duration: 1500
+                })
+                .add({
+                    targets: "#logo",
+                    scale: '5',
+                    opacity: ['100%', '0%'],
+                    complete: function () {
+                        document.querySelector("svg").style.display = "none";
+                        document.querySelector("#options").style.display = "block";
+                    },
+                    duration: 1500
+                })
+                .add({
+                    targets: "#name",
+                    opacity: ['0%', '100%'],
+                    scale: [0.5, 1],
+                    translateY: [0, 0, "-100px"]
+                }, "-=750")
+                .add({
+                    targets: "#options",
+                    opacity: ['0%', '100%']
+                }, "-=250")
+            function aboutPressed() {
+                document.getElementById("aboutButton").onclick = goToMain
+                anime.timeline({
+                    easing: 'easeInOutQuad'
+                })
+                    .add({
+                        targets: "#name, #options",
+                        opacity: ['100%', '0%'],
+                        scale: [1, 0.5],
+                        complete: function () {
+                            document.getElementById("about").style.display = "block"
+                            document.getElementById("aboutButton").innerText = "Back"
+                        }
+                    })
+                    .add({
+                        targets: "#options",
+                        translateY: "100px",
+                        duration: 1
+                    })
+                    .add({
+                        targets: "#name",
+                        translateY: "-200px",
+                        duration: 1
+                    })
+                    .add({
+                        targets: "#about, #options, #name",
+                        opacity: ['0%', '100%'],
+                        scale: [0.5, 1],
+                        duration: 1000
+                    })
+            }
+
+            function goToMain() {
+                document.getElementById("aboutButton").onclick = aboutPressed
+                anime.timeline({
+                    easing: 'easeInOutQuad'
+                })
+                    .add({
+                        targets: "#about, #options, #name",
+                        opacity: ['100%', '0%'],
+                        scale: [1, 0.5],
+                        complete: function () {
+                            document.getElementById("about").style.display = "none"
+                            document.getElementById("aboutButton").innerText = "About"                        }
+                    })
+                    .add({
+                        targets: "#name",
+                        translateY: "-100px",
+                        duration: 1
+                    })
+                    .add({
+                        targets: "#options",
+                        translateY: "0px",
+                        duration: 1
+                    })
+                    .add({
+                        targets: "#options, #name",
+                        opacity: ['0%', '100%'],
+                        scale: [0.5, 1],
+                        duration: 1000
+                    })
+            }
+
+            function projectPressed() {
+                anime.timeline({
+                    easing: "easeInOutQuad"
+                })
+                    .add({
+                        targets: "#main",
+                        height: ["100vh", "0vh"],
+                        opacity: ["100%", "0%"],
+                        duration: 1000
+                    })
+                    .add({
+                        targets: "#projects",
+                        opacity: ["0%", "100%"],
+                        duration: 1000,
+                        begin: function () {
+                            document.getElementById("projects").style.display = "flex"
+                        },
+                    }, "-=500")
+            }
+
+            function exitProjects() {
+                anime.timeline({
+                    easing: "easeInOutQuad"
+                })
+                    .add({
+                        targets: "#projects",
+                        opacity: ["100%", "0%"],
+                        duration: 1000
+                    })
+                    .add({
+                        targets: "#main",
+                        height: ["0vh", "100vh"],
+                        opacity: ["0%", "100%"],
+                        duration: 1000,
+                        begin: function () {
+                            document.getElementById("projects").style.display = "none;"
+                        },
+                    }, "-=500")
+            }
+
+            function goBack() {
+                var currentElement = [...document.querySelectorAll("#actualprojects > div")].find(ele => ele.style.display != "none");
+                var newElement = currentElement.previousElementSibling;
+                if (!newElement) return;
+
+                anime.timeline({ easing: "easeInOutQuad" })
+                    .add({
+                        targets: currentElement,
+                        opacity: ["100%", "0%"],
+                        scale: [1, 0.5],
+                        complete: function () {
+                            currentElement.style.display = "none";
+                            newElement.style.display = "block";
+                        }
+                    })
+                    .add({
+                        targets: newElement,
+                        opacity: ["0%", "100%"],
+                        scale: [0.5, 1]
+                    })
+
+            }
+
+            function goNext() {
+                var currentElement = [...document.querySelectorAll("#actualprojects > div")].find(ele => ele.style.display != "none");
+                var newElement = currentElement.nextElementSibling;
+                if (!newElement) return;
+
+                anime.timeline({ easing: "easeInOutQuad", duration: 500 })
+                    .add({
+                        targets: currentElement,
+                        opacity: ["100%", "0%"],
+                        scale: [1, 0.5],
+                        complete: function () {
+                            currentElement.style.display = "none";
+                            newElement.style.display = "block";
+                        }
+                    })
+                    .add({
+                        targets: newElement,
+                        opacity: ["0%", "100%"],
+                        scale: [0.5, 1]
+                    })
+            }
+        </script>
+</body>
+
+</html>
