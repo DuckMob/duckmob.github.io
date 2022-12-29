@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>RedYetiDev</title>
+    <title>DuckMob</title>
     <script src="anime.min.js"></script>
     <link href="index.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
@@ -14,12 +14,12 @@
 
 <body>
     <div class="flex" id="main">
-        <div style="font-size: 100px; position: absolute;" id="name">RedYetiDev</div>
+        <div style="font-size: 100px; position: absolute;" id="name">DuckMob</div>
         <div id="about" style="font-size: 25px; display: none; padding-left: 75px; padding-right: 75px;">
-            👋, I am <b>RedYetiDev</b>. I would say I am pretty good at developing anything API or WebSocket related. I
+            👋, I am <b>DuckMob</b>. I would say I am pretty good at developing anything HTML or NodeJs related. I
             tend
-            to code in JavaScript, but I still know several other languages. If you wanna know more about me, my email
-            is <a style="color: lightblue" href="mailto:redyetidev@gmail.com">RedYetiDev@gmail.com</a>
+            to code in HTML, but I still know several other languages. I mainly stay anonymous but, if you wanna know more about me, my email
+            is <a style="color: lightblue" href="mailto:duckmobmafia@gmail.com">DuckMobMafia@gmail.com</a> and my Discord is DuckMob#4433</a>
         </div>
         <div style="display: none;" id="options">
             <button id="projectButton" class="button" onclick="projectPressed()">Projects</button>
@@ -27,9 +27,9 @@
             <button class="button social" style="text-align: center;">
                 <span class="text">Socials</span>
                 <div class="links">
-                    <i class="fa-brands fa-github" onclick="document.location = 'https://github.com/redyetidev'"></i>
-                    <i class="fa-brands fa-google" onclick="document.location = 'mailto:redyetidev@gmail.com'"></i>
-                    <i class="fa-brands fa-npm" onclick="document.location = 'https://www.npmjs.com/~redyetidev'"></i>
+                    <i class="fa-brands fa-github" onclick="document.location = 'https://github.com/duckmob'"></i>
+                    <i class="fa-brands fa-google" onclick="document.location = 'mailto:duckmobmafia@gmail.com'"></i>
+                    <i class="fa-brands fa-npm" onclick="document.location = 'https://www.npmjs.com/~duckmob'"></i>
                 </div>
             </button>
         </div>
@@ -61,59 +61,49 @@
         <div style="position: absolute; top: 0;">
             <h1 style="font-size: 50px; margin-bottom: -10px;">Projects</h1>
             <h1 style="font-size: 25px; color: gray;">View full list on <a style="color: lightskyblue"
-                    href="https://github.com/RedYetiDev?tab=repositories">GitHub</a></h1>
+                    href="https://github.com/DuckMob?tab=repositories">GitHub</a></h1>
             <button class="button" onclick="exitProjects()">Back</button>
         </div>
         <div id="actualprojects">
             <div id="quizlet">
-                <div style="font-size: 100px;">Quizlet.JS</div>
-                <div style="font-size: 25px;">Quizlet.JS is both a wrapper for the Quizlet API, and a client for Quizlet
-                    Live</div>
+                <div style="font-size: 100px;">Bigfoot's Game Shack</div>
+                <div style="font-size: 25px;">Bigfoot's Game Shack is the best website for playing a variation of unblocked games at school.</div>
                 <br />
                 <div>
                     <button class="button"
-                        onclick="window.location = 'https://github.com/redyetidev/quizlet.js'"><i class="fa-brands fa-github"></i>Repository</button>
-                    <button class="button"
-                        onclick="window.location = 'https://www.npmjs.com/package/quizlet.js'"><i class="fa-brands fa-npm"></i>Package</button>
-                    <button class="button" onclick="window.location = 'https://quizlet.js.org'">Documentation</button>
-                    <button class="button" onclick="window.location = 'https://web.quizlet.js.org'">Live Client</button>
+                        onclick="window.location = 'https://https://github.com/BigfootsGS/BigfootsGS.github.io'"><i class="fa-brands fa-github"></i>Repository</button>
+                    <button class="button" onclick="window.location = 'https://duckmob.github.io/Healthlet/'">Live Client</button>
                 </div>
             </div>
             <div id="quizizz" style="display: none;">
-                <div style="font-size: 100px;">jsQuizizz</div>
-                <div style="font-size: 25px;">jsQuizizz is both a wrapper for the Quizizz API, and a client for the
-                    hosted
-                    games</div>
+                <div style="font-size: 100px;">Healthlet</div>
+                <div style="font-size: 25px;">Healthlet is a meme site based on blooket, showing you on how to get fit.</div>
                 <br />
                 <div>
                     <button class="button"
-                        onclick="window.location = 'https://github.com/redyetidev/jsQuizizz'"><i class="fa-brands fa-github"></i>Repository</button>
+                        onclick="window.location = 'https://github.com/DuckMob/Healthlet'"><i class="fa-brands fa-github"></i>Repository</button>
                         <button class="button"
-                        onclick="window.location = 'https://www.npmjs.com/package/jsquizizz'"><i class="fa-brands fa-npm"></i>Package</button>
+                        onclick="window.location = 'https://www.npmjs.com/package/jsquizizz'"></i>Live Client</button>
                 </div>
             </div>
             <div id="tt" style="display: none;">
-                <div style="font-size: 100px;">TerminalTools</div>
-                <div style="font-size: 25px;">Tools for your terminal</div>
+                <div style="font-size: 100px;">Get More Math!</div>
+                <div style="font-size: 25px;">Site with hundreds of amazing fast games. Sadly discontinued</div>
                 <br />
                 <div>
                     <button class="button"
-                        onclick="window.location = 'https://github.com/redyetidev/terminaltools'"><i class="fa-brands fa-github"></i>Repository</button>
-                    <button class="button"
-                        onclick="window.location = 'https://www.npmjs.com/package/terminaltools'"><i class="fa-brands fa-npm"></i>Package</button>
-                        
-                    <button class="button" onclick="window.location = 'https://tt.js.org'">Website</button>
+                        onclick="window.location = 'https://github.com/DuckMob/bookish-spoon'"><i class="fa-brands fa-github"></i>Repository</button>
                 </div>
             </div>
             <div id="tv" style="display: none;">
-                <div style="font-size: 100px;">TermView</div>
-                <div style="font-size: 25px;">Render images and videos within the terminal</div>
+                <div style="font-size: 100px;">SearchTap</div>
+                <div style="font-size: 25px;">A educational browser, sorta like google scholar.</div>
                 <br />
                 <div>
                     <button class="button"
-                        onclick="window.location = 'https://github.com/redyetidev/termview'"><i class="fa-brands fa-github"></i>Repository</button>
+                        onclick="window.location = 'https://github.com/DuckMob/searchtap'"><i class="fa-brands fa-github"></i>Repository</button>
                     <button class="button"
-                        onclick="window.location = 'https://www.npmjs.com/package/termview'"><i class="fa-brands fa-npm"></i>Package</button>
+                        onclick="window.location = 'https://www.search-tap.org'"></i>Live Client</button>
                 </div>
             </div>
         </div>
